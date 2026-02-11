@@ -8,6 +8,7 @@ const Header = () => {
 
                 <Link to="form"> Form</Link>
                 <Link to="display"> Display</Link>
+                <Link to="edit"> Edit</Link>
             </div>
 
         </>

@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Forms from './Pages/Forms'
 import Layout from './Pages/Layout'
 import Display from './Pages/Display'
+import Edit from './Pages/Edit' 
+import EditUpdate from './Pages/EditUpdate'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -20,7 +20,9 @@ function App() {
           <Route path='form' element={<Forms />} />
           <Route index element={<Forms />} />
           <Route path='display' element={<Display/>} />
-          <Route />
+          <Route path='edit' element={<Edit/>} />
+          <Route path='editupdate/:id' element={<EditUpdate/>} />
+          
 
         </Route>
       </Routes>
