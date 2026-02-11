@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Forms from './Pages/Forms'
+import Layout from './Pages/Layout'
+import Display from './Pages/Display'
 
 
 function App() {
@@ -10,14 +12,14 @@ function App() {
   return (
     <>
 
-    <Forms/>
 
 
       <Routes>
-        <Route>
+        <Route path='/' element={<Layout />}>
 
-          <Route />
-          <Route />
+          <Route path='form' element={<Forms />} />
+          <Route index element={<Forms />} />
+          <Route path='display' element={<Display/>} />
           <Route />
 
         </Route>
